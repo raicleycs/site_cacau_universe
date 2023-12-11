@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cacau Universe</title>
+    <link rel="icon" href="img/LOGO 1.png"><link
+    rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+<body>
+
+    <div class="navbar">
+      <div>
+        <a href="index.html"> <img class="logo-navbar" src="img/LOGO 1.png" alt="logo"></a>
+       </div>
+        <a href="index.html">Início</a>
+        <a href="Produtos.html">Produtos</a>
+        <a href="Cadastro.html">Cadastro</a>
+        <input class="bt-navbar" type="text" placeholder="Pesquise aqui...">
+        <button class="bt-navbar1" type="submit">Pesquisar</button>
+
+        <div>
+          <a href="Produtos.html" class="carrinho"> <img src="img/carrinho 2.webp" alt="carrinho"></a>
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="script/script.js"></script>
+
+   
+
+    <div class="container-carrossel">
+      <div class="slide-carrossel">
+          <img class="imagem-carrossel" src="img/banner slider 1.png" alt="Imagem 1">
+          <img class="imagem-carrossel" src="img/banner slider 2.png" alt="Imagem 2">
+          <img class="imagem-carrossel" src="img/banner slider 3.png" alt="Imagem 3">
+      </div>
+  </div>
+
+  <script>
+      const carousel = document.querySelector('.slide-carrossel');
+      const images = document.querySelectorAll('.imagem-carrossel');
+      const interval = 5000; // 3 segundos
+
+      let currentIndex = 0;
+
+      function nextSlide() {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateCarousel();
+      }
+
+      function updateCarousel() {
+          const offset = -currentIndex * 1300; // Largura fixa por imagem
+          carousel.style.transform = `translateX(${offset}px)`;
+      }
+
+      setInterval(nextSlide, interval);
+  </script>
+
+<div class="texto-slogan">
+
+  <img src="img/banner slogan.png">
+
+ </div>
+
+
+
+
+
+
+    
+    <footer>
+        <div class="container">
+          <div class="logo">
+            <img src="img/LOGO 1.png" alt="Logo da Empresa">
+          </div>
+          <div class="contact-info">
+            <p>Telefone: (15) xxxx-xxxx</p>
+            <p>Email: cacauuniverseoficial@hotmail.com</p>
+          </div>
+          <div class="company-info">
+            <p>Endereço: Av.São Carlos,900</p>
+            <p>Vila Dr.Laurindo,Tatuí-SP</p>
+          </div>
+        </div>
+      </footer>
+
+   
+    
+    
+</body>
+</html>
